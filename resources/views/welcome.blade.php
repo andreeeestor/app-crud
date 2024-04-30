@@ -15,8 +15,11 @@
         <input type="text" name="descricao_produto" id="" placeholder="descrição">
         <input type="number" name="quantidade_produto" id="" placeholder="quantidade" value="0.00">
         <button type="submit">Enviar</button>
-
     </form>
     
+    @if(session('mensagem'))
+        <p>{{ session('mensagem') }}</p>
+        <a href="{{ route('lista.produtos') }}">Ver Produtos</a>
+    @endif
 </body>
 </html>
